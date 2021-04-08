@@ -9,13 +9,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    Random r = new Random();
-    int randNum = r.nextInt((7 - 1) + 1) + 1;
-    if (randNum == 1) {
-        response.sendRedirect("/hello");
-    } else if (randNum == 7) {
-        response.sendError(500);
-    }
+//    Random r = new Random();
+//    int randNum = r.nextInt((7 - 1) + 1) + 1;
+//    if (randNum == 1) {
+//        response.sendRedirect("/hello");
+//    } else if (randNum == 7) {
+//        response.sendError(500);
+//    }
+
+//    localhost:8080/implicit.jsp?color=blue
     String textColor = (request.getParameter("color") != null) ? request.getParameter("color") : "";
 %>
 <html>
@@ -24,7 +26,7 @@
 </head>
 <body>
 
-    <h1><%= randNum %></h1>
+<%--    <h1><%= randNum %></h1>--%>
     <h3 style="color:<%= textColor %>">Some color</h3>
     <p>Query String: <%= request.getQueryString() %></p>
     <p>Path: <%= request.getRequestURL() %></p>

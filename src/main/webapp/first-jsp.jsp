@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: justinreich
-  Date: 2019-10-21
-  Time: 10:35
+  Date: 4/8/21
+  Time: 1:52 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,8 +12,11 @@
 </head>
 <body>
 
-    <h1><%= request.getMethod() %></h1>
-    <h1>Your name is: <%= request.getParameter("displayName") %></h1>
+    <%-- Will I see this in the browser? --%>
+    <!-- Will I see this other comment in the browser? -->
+    <h1>Hello Luna!</h1>
+    <p>Here is some "regular" html...</p>
+
 
 </body>
 </html>

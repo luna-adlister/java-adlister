@@ -12,13 +12,13 @@
 
 <%! int instanceCount = 0; %>
 
-
 <%
     int localCount = 1;
     localCount += 1;
     instanceCount  += 1;
     List test = new ArrayList<>(); // requires directive
 %>
+
 
 <html>
 <head>
