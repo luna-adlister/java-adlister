@@ -1,18 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.Arrays" %>
 <%@ page import="model.Contact" %>
 <%@ page import="java.util.List" %>
-<%@ page import="model.User" %><%--
-  Created by IntelliJ IDEA.
-  User: justinreich
-  Date: 2019-10-21
-  Time: 12:03
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="model.User" %>
 <%
-
-
-
-
     List<Contact> contacts = Arrays.asList(
             new Contact("Bob Smith", "2105551212"),
             new Contact("Sally Smith", "2105552323"),
@@ -20,12 +12,8 @@
     );
 
     request.setAttribute("contacts", contacts);
-
     request.setAttribute("loggedInUser", new User("Bob Smith"));
-
 %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Contacts</title>
@@ -53,9 +41,7 @@
             </c:if>
         </div>
 
-
     </c:forEach>
-
 
 </body>
 </html>

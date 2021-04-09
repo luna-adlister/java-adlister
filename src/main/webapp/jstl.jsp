@@ -15,13 +15,18 @@
 
     <h1>JSTL Examples</h1>
 
-    <c:if test="${2 < 3}">
-        <h2>Will display</h2>
-    </c:if>
+<%--    <c:if test="${2 > 3}">--%>
+<%--        <h2>Will display</h2>--%>
+<%--    </c:if>--%>
 
     <ol>
         <c:forEach var="favFood" items="${favFoods}">
-            <li>${favFood}</li>
+            <div>
+                <h2>One of my favorite foods is... ${favFood}</h2>
+                <hr>
+                <br>
+                <hr>
+            </div>
         </c:forEach>
     </ol>
 
