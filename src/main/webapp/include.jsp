@@ -13,12 +13,8 @@
     <%@include file="partials/stylesheets.html" %>
 </head>
 <body>
-
     <%@include file="partials/navbar.html" %>
-
     <h1>Some title</h1>
-
     <%@include file="partials/footer.html" %>
-
 </body>
 </html>
