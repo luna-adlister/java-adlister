@@ -10,13 +10,16 @@ import java.io.IOException;
 public class ColorPreferenceServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/color-form.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/color-form.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
+         HttpSession session = request.getSession();
 
         // add my preferences to the session and redirect to the /ads
+        System.out.println("THE VALUE OF THE FORGET PARAM: " + request.getParameter("forget"));
+
+
         if (request.getParameter("forget") != null) {
             session.removeAttribute("font-color");
             session.removeAttribute("background-color");
