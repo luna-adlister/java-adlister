@@ -1,0 +1,3 @@
+hammer,5.99
+nails,10.99
+rake,7.99
