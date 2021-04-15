@@ -22,9 +22,11 @@ public class CreateAdServlet extends HttpServlet {
         adToBeCreated.setDescription(description);
         adToBeCreated.setUserId(1L);
 
-        DaoFactory.getAdsDao().insert(adToBeCreated);
+        long savedId = DaoFactory.getAdsDao().insert(adToBeCreated);
+        adToBeCreated.setId(savedId);
 
-        response.sendRedirect("/ads");
+        request.setAttribute("ad", adToBeCreated);
+        request.getRequestDispatcher("/WEB-INF/ads/show.jsp").forward(request, response);
 
     }
 }
