@@ -16,7 +16,7 @@ public class PreparedStatementsTest {
             DriverManager.registerDriver(new Driver());
             Connection conn = DriverManager.getConnection(
                     "jdbc:mysql://localhost/codeup_test_db?serverTimezone=UTC&useSSL=false",
-                    "root",
+                    "main",
                     "codeup"
             );
 
