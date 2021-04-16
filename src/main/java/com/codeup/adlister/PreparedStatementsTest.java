@@ -74,7 +74,7 @@ public class PreparedStatementsTest {
 //                    "asdfasdf",
 //                    0000,
 //                    0,
-//                    "awful"
+//                    "meh"
 //            );
 //
 //            String updateQuery = String.format(
