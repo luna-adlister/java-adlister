@@ -37,8 +37,8 @@ public class MySQLAdsDao implements Ads {
                 ));
 
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return ads;
     }
@@ -56,8 +56,8 @@ public class MySQLAdsDao implements Ads {
             if(rs.next()) {
                 newId = rs.getLong(1);
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException exception) {
+            exception.printStackTrace();
         }
 
         return newId;
