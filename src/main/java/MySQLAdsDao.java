@@ -8,13 +8,13 @@ public class MySQLAdsDao implements Ads {
 
     Connection connection = null;
 
-    public MySQLAdsDao(){
+    public MySQLAdsDao(Config config){
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false",
-                    "root",
-                    "codeup"
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
         } catch (SQLException throwables) {
             throwables.printStackTrace();
